@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Clément S.</title>
+
+
         <!-- Angular JS-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
@@ -15,11 +17,31 @@
 
         <script src="app.js"></script>
 
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+        <link rel="stylesheet" href="app.css">
     </head>
-    <body ng-app="pageModule">
-    <div id="main" ng-controller="pageController">
-      {{test}}
-    </div>
+    <body ng-app="pageModule" ng-controller="pageController" ng-init="init()">
 
+      <md-content class="animate-opacity main" layout="column" layout-align="center center" >
+        <div class="mainCard">
+
+          <div id="catchPhrase" flex>
+            <h1 flex>{{catchPhrase}}</h1>
+          </div>
+
+          <div id="links" layout="row" layout-align="center center" flex>
+            <div flex><img class="scale" src="img/github.png"></div>
+            <div flex><img class="scale" src="img/linkedin.png"></div>
+          </div>
+
+        </div>
+      </md-content>
+
+
+      <script type="text/javascript" src="lib/vanilla-tilt.min.js"></script>
     </body>
+    <footer>
+      <img class="kcode" src="img/kcode-small.png">
+    </footer
 </html>
