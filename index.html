@@ -7,7 +7,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="lib/blockrain/blockrain.jquery.min.js"></script>
 
-
         <!-- Angular JS-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
@@ -25,26 +24,27 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="app.css">
-        <link rel="stylesheet" href="lib/blockrain/blockrain.css"
+        <link rel="stylesheet" href="lib/blockrain/blockrain.css">
     </head>
+
+
     <body ng-app="pageModule" ng-controller="pageController" ng-init="init()">
 
       <md-content class="animate-opacity main" layout="column" layout-align="center center">
 
-        <div class="mainCard" ng-hide="cardHide" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-scale="1.1">
+        <div class="mainCard" ng-hide="cardHide" data-tilt data-tilt-glare data-tilt-max-glare="0.6" data-tilt-max="0">
 
           <div class="info">
             <div id="avatar" layout="row" layout-align="center center" flex>
               <img src="https://github.com/EISAWESOME.png" class="scale" alt="Avatar">
             </div>
 
-
-            <div id="catchPhrase" class="pop" layout="row" layout-align="center center" flex>
+            <div id="catchPhrase" layout="row" layout-align="center center" flex>
               <div>{{catchPhrase}}</div>
             </div>
 
 
-            <div id="links" class="pop" layout="row" layout-align="center center" flex>
+            <div id="links" layout="row" layout-align="center center" flex>
               <div flex><a href="https://github.com/EISAWESOME"><img class="scale-small" src="img/github.png"></a></div>
               <div flex><a href="https://www.linkedin.com/in/csimonin-dev/"><img class="scale-small" src="img/linkedin.png"></a></div>
             </div>
@@ -63,10 +63,13 @@
 
       </md-content>
 
+      <img class="kcode" ng-hide="cardHide" src="img/kcode-small.png">
 
       <script type="text/javascript" src="lib/vanilla-tilt.min.js"></script>
     </body>
-    <footer>
-      <img class="kcode" ng-hide="cardHide" src="img/kcode-small.png">
-    </footer
+
+
+
+
+
 </html>
