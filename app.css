@@ -20,10 +20,7 @@ body {
   background-color: #bee1e8; /* fallback */
   background-image: linear-gradient(150deg, #5c93c4 0%, #2b153d 100%, #2b153d 100%);
   background-size:cover;
-/*
-  max-width: 50%;
-  max-height: 50%;
-  */
+
   /* Fluid square */
   width: 40%;
   height: 0;
@@ -42,7 +39,7 @@ body {
 }
 
 .pop {
-  transform: translateZ(2vw);
+  transform: translateZ(1vw);
 }
 
 .ng-hide {

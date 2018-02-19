@@ -13,7 +13,7 @@ app.controller("pageController", function($rootScope, $scope, $timeout){
       max: 0,
       glare: true,
       "max-glare": 0.4,
-      scale: 1.1,
+      scale: 1.05,
     });
 
 
