@@ -39,7 +39,7 @@ body {
 }
 
 .pop {
-  transform: translateZ(3vw);
+  transform: translateZ(2vw);
 }
 
 .ng-hide {
