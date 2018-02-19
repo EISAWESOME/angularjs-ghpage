@@ -10,9 +10,6 @@ body {
     from{opacity:0} to{opacity:1}
 }
 
-
-
-
 .main{
   background-color : #101216;
   width:100%;
@@ -21,7 +18,7 @@ body {
 
 .mainCard {
   background-color: #bee1e8; /* fallback */
-  background-image: linear-gradient(150deg, #5a00ff 0%, #ff1ff7 100%, #ff1ff7 100%);
+  background-image: linear-gradient(150deg, #5c93c4 0%, #2b153d 100%, #2b153d 100%);
   background-size:cover;
 /*
   max-width: 50%;
@@ -35,6 +32,12 @@ body {
   transform-style: preserve-3d;
 
   transition: all linear 1s;
+
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 
 }
 

@@ -9,6 +9,13 @@ app.controller("pageController", function($rootScope, $scope, $timeout){
     $scope.catchPhrase = "<clement-s/>";
     $scope.avatarUrl = "https://github.com/EISAWESOME.png";
 
+    VanillaTilt.init(document.querySelector(".mainCard"), {
+      max: 0,
+      glare: true,
+      "max-glare": 0.4,
+      scale: 1.1,
+    });
+
 
 
 
