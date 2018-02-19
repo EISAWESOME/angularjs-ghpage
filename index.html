@@ -3,6 +3,14 @@
     <head>
         <title>Clément S.</title>
 
+        <!-- Jquery -->
+        <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
+        <script src="lib/blockrain/blockrain.jquery.min.js"></script>
+
 
         <!-- Angular JS-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -16,32 +24,59 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
         <script src="app.js"></script>
+        <script src="lib/konami.js"></script>
 
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="lib/blockrain/blockrain.css"
     </head>
     <body ng-app="pageModule" ng-controller="pageController" ng-init="init()">
 
-      <md-content class="animate-opacity main" layout="column" layout-align="center center" >
-        <div class="mainCard">
+      <md-content class="animate-opacity main" layout="column" layout-align="center center">
 
-          <div id="catchPhrase" flex>
-            <h1 flex>{{catchPhrase}}</h1>
+        <div class="mainCard" ng-hide="cardHide" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-scale="1.1">
+
+          <div class="info">
+            <div id="avatar" layout="row" layout-align="center center" flex>
+              <img src="https://github.com/EISAWESOME.png" class="scale" alt="Avatar">
+            </div>
+
+
+            <div id="catchPhrase" class="pop" layout="row" layout-align="center center" flex>
+              <div>{{catchPhrase}}</div>
+            </div>
+
+
+            <div id="links" class="pop" layout="row" layout-align="center center" flex>
+              <div flex><a href="https://github.com/EISAWESOME"><img class="scale-small" src="img/github.png"></a></div>
+              <div flex><a href="https://www.linkedin.com/in/csimonin-dev/"><img class="scale-small" src="img/linkedin.png"></a></div>
+            </div>
+
           </div>
-
-          <div id="links" layout="row" layout-align="center center" flex>
-            <div flex><img class="scale" src="img/github.png"></div>
-            <div flex><img class="scale" src="img/linkedin.png"></div>
-          </div>
-
         </div>
+
+        <div class="tetris" ng-show="tetrisShow"  style="height :100%; width :100%;" layout="row" layout-align="center center">
+          <div class="instruction" flex>
+
+            <div class="keyboard">
+              <div class="key key-up"></div>
+              <div class="key key-left"></div>
+              <div class="key key-down"></div>
+              <div class="key key-right"></div>
+            </div>
+
+          </div>
+          <div class="game" style="background-color:white; height :100%; width :30%; position:absolute" flex></div>
+          <div flex></div>
+        </div>
+
       </md-content>
 
 
       <script type="text/javascript" src="lib/vanilla-tilt.min.js"></script>
     </body>
     <footer>
-      <img class="kcode" src="img/kcode-small.png">
+      <img class="kcode" ng-hide="cardHide" src="img/kcode-small.png">
     </footer
 </html>
