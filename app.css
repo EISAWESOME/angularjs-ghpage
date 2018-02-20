@@ -1,7 +1,7 @@
 body {
   background-color: transparent;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto Slab", sans-serif;
 
   /* Hack to enable hardware acceleration*/
   -webkit-transform: translateZ(0);
@@ -9,6 +9,23 @@ body {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+.constr{
+  font-family: "Lato", sans-serif;
+  background: transparent;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  text-align: center;
+
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 10px;
 }
 
 .animate-opacity{
@@ -59,13 +76,10 @@ body {
 }
 
 #catchPhrase {
+  opacity: 0.7;
   margin-top: 1vw;
   margin-bottom: 5vw;
   text-align: center;
-}
-
-#catchPhrase {
-
   font-size: 3.5vw;
   color : white;
 }
