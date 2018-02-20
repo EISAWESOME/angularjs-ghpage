@@ -1,6 +1,5 @@
 body {
   background-color: transparent;
-  overflow:hidden;
 
   font-family: 'Roboto', sans-serif;
 
@@ -37,7 +36,7 @@ body {
 
   transform-style: preserve-3d;
 
-  transition: all linear 1s;
+  transition: all linear 0.1s;
 }
 
 .pop {
@@ -45,6 +44,7 @@ body {
 }
 
 .ng-hide {
+  transition: all linear 1s;
   opacity: 0;
 }
 
@@ -60,7 +60,7 @@ body {
 
 #catchPhrase {
   margin-top: 1vw;
-  margin-bottom: 3vw;
+  margin-bottom: 5vw;
   text-align: center;
 }
 
@@ -87,7 +87,8 @@ body {
   max-width: 30%;
 }
 
-.scale-small.github:hover{
+.scale-small.github:hover, .scale-small.github:active,
+.scale-small.resume:hover, .scale-small.resume:active{
   transform: scale(1.1);
   filter: invert(100%);
 }
@@ -95,6 +96,18 @@ body {
 .scale-small.linkedin:hover{
   transform: scale(1.1);
   filter: brightness(50%) sepia(100) saturate(70) hue-rotate(180deg);
+}
+
+
+
+.tetris {
+  height :100%; width :100%;
+}
+
+.game{
+  height :100%;
+   width :30%;
+   position :absolute;
 }
 
 .kcode {
@@ -108,8 +121,7 @@ body {
 }
 
 
-
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .mainCard {
 
     width: 80%;
@@ -124,5 +136,6 @@ body {
 
   #catchPhrase {
     font-size: 7vw;
+    margin-bottom: 10vw;
   }
 }

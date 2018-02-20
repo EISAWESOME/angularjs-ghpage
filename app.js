@@ -11,11 +11,10 @@
       $scope.avatarUrl = "https://github.com/EISAWESOME.png";
     };
 
-    $scope.goBack = function(){
-    }
-
-    var tetris = new Konami(function(){
+    new Konami(function(){
       //Do the unlock animation
+      $scope.achivementTriggered = true;
+
       //Hide maincard class
       $scope.cardHide = true;
 

@@ -25,51 +25,61 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="app.css">
         <link rel="stylesheet" href="lib/stars/stars.css">
+        <link rel="stylesheet" href="lib/achievement/achievement.css">
         <link rel="stylesheet" href="lib/blockrain/blockrain.css">
     </head>
 
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
 
 
     <body ng-app="pageModule" ng-controller="pageController" ng-init="init()">
 
+      <div class="starsContainer" layout="row" layout-wrap flex>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+
+        <md-content class="animate-opacity main" layout="column" layout-align="center center">
+
+          <div class="mainCard" ng-hide="cardHide" ng-cloak>
+
+            <div class="info">
+              <div id="avatar" layout="row" layout-align="center center" flex>
+                <img src="https://github.com/EISAWESOME.png" class="scale" alt="Avatar">
+              </div>
+
+              <div id="catchPhrase" layout="row" layout-align="center center" flex>
+                {{catchPhrase}}
+              </div>
 
 
-      <md-content class="animate-opacity main" layout="column" layout-align="center center">
+              <div id="links" class="pop" layout="row" layout-align="center center" flex>
+                <div flex><a href="https://github.com/EISAWESOME"><img class="scale-small github" src="img/github.png"></a></div>
+                <div flex><a href="https://www.linkedin.com/in/csimonin-dev/"><img class="scale-small linkedin" src="img/linkedin.png"></a></div>
+                <div flex><a href="lib/CV-clement-simonin.pdf" target="_blank"><img class="scale-small resume" src="img/resume.png"></a></div>
+              </div>
 
-        <div class="mainCard" ng-hide="cardHide" ng-cloak>
-
-          <div class="info">
-            <div id="avatar" layout="row" layout-align="center center" flex>
-              <img src="https://github.com/EISAWESOME.png" class="scale" alt="Avatar">
             </div>
+          </div>
 
-            <div id="catchPhrase" layout="row" layout-align="center center" flex>
-              {{catchPhrase}}
-            </div>
+          <div class="tetris" ng-show="tetrisShow" layout="row" layout-align="center center">
+            <div class="game"></div>
+          </div>
+
+        </md-content>
+      </div>
 
 
-            <div id="links" class="pop" layout="row" layout-align="center center" flex>
-              <div flex><a href="https://github.com/EISAWESOME"><img class="scale-small github" src="img/github.png"></a></div>
-              <div flex><a href="https://www.linkedin.com/in/csimonin-dev/"><img class="scale-small linkedin" src="img/linkedin.png"></a></div>
-            </div>
-
+      <div class="achievement-container" ng-if="achivementTriggered">
+        <div class="achievement achievement-banner">
+          <div class="achievement achievement-icon">
+            <span class="achievement icon"><span class="icon-trophy"></span></span>
+          </div>
+          <div class="achievement achievement-text">
+            <p class="achievement achievement-notification">Achievement unlocked</p>
+            <p class="achievement achievement-name">500G &ndash; Keen eye</p>
           </div>
         </div>
-
-        <div class="tetris" ng-show="tetrisShow"  style="height :100%; width :100%;" layout="row" layout-align="center center">
-          <md-button class="md-fab md-warn " aria-label="Eat cake">
-              <md-icon
-              ng-click="goBack()"
-              md-svg-src="img/icons/cake.svg"></md-icon>
-          </md-button>
-
-          <div class="game" style="background-color:white; height :100%; width :30%; position:absolute" flex></div>
-          <div flex></div>
-        </div>
-      </md-content>
+      </div>
 
       <img class="kcode" ng-hide="cardHide" src="img/kcode-small.png">
 
