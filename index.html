@@ -24,15 +24,22 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="lib/stars/stars.css">
         <link rel="stylesheet" href="lib/blockrain/blockrain.css">
     </head>
+
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
 
 
     <body ng-app="pageModule" ng-controller="pageController" ng-init="init()">
 
+
+
       <md-content class="animate-opacity main" layout="column" layout-align="center center">
 
-        <div class="mainCard" ng-hide="cardHide">
+        <div class="mainCard" ng-hide="cardHide" ng-cloak>
 
           <div class="info">
             <div id="avatar" layout="row" layout-align="center center" flex>
@@ -40,21 +47,25 @@
             </div>
 
             <div id="catchPhrase" layout="row" layout-align="center center" flex>
-              <div>{{catchPhrase}}</div>
+              {{catchPhrase}}
             </div>
 
 
             <div id="links" class="pop" layout="row" layout-align="center center" flex>
-              <div flex><a href="https://github.com/EISAWESOME"><img class="scale-small" src="img/github.png"></a></div>
-              <div flex><a href="https://www.linkedin.com/in/csimonin-dev/"><img class="scale-small" src="img/linkedin.png"></a></div>
+              <div flex><a href="https://github.com/EISAWESOME"><img class="scale-small github" src="img/github.png"></a></div>
+              <div flex><a href="https://www.linkedin.com/in/csimonin-dev/"><img class="scale-small linkedin" src="img/linkedin.png"></a></div>
             </div>
 
           </div>
         </div>
 
         <div class="tetris" ng-show="tetrisShow"  style="height :100%; width :100%;" layout="row" layout-align="center center">
-          <div class="instruction" flex>
-          </div>
+          <md-button class="md-fab md-warn " aria-label="Eat cake">
+              <md-icon
+              ng-click="goBack()"
+              md-svg-src="img/icons/cake.svg"></md-icon>
+          </md-button>
+
           <div class="game" style="background-color:white; height :100%; width :30%; position:absolute" flex></div>
           <div flex></div>
         </div>
@@ -62,6 +73,5 @@
 
       <img class="kcode" ng-hide="cardHide" src="img/kcode-small.png">
 
-      <script type="text/javascript" src="lib/vanilla-tilt.min.js"></script>
     </body>
 </html>
