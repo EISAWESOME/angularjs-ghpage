@@ -1,33 +1,28 @@
 (function(){
-  var app = angular.module("pageModule", ['ngMaterial', 'ngAnimate']);
+  let app = angular.module("pageModule", ['ngMaterial', 'ngAnimate']);
 
   app.controller("pageController", function($rootScope, $scope, $timeout){
 
-    var username = "EISAWESOME";
-
+    let username = "EISAWESOME";
 
     $scope.init = function(){
       $scope.catchPhrase = "<clement-s/>";
-      $scope.avatarUrl = "https://github.com/EISAWESOME.png";
+      $scope.avatarUrl = "https://github.com/"+ username +".png";
     };
 
     new Konami(function(){
-      //Do the unlock animation
       $scope.achivementTriggered = true;
 
-      //Hide maincard class
       $scope.cardHide = true;
 
       $timeout(function(){
-        //Show tetris div
         $scope.tetrisShow = true;
 
-        //Create the button to go back
-
         $timeout(function(){
-          $('.game').blockrain({theme: "candy", playText: 'IT\'S A SECRET TO EVERYBODY',});
+          $('.game').blockrain({theme: "candy", playText: 'Use arrow keys to play', playButtonText: 'Understood !',});
 
-          var tetrisTheme = new Audio('resources/Tetris_theme.ogg');
+          let tetrisTheme = new Audio('resources/Tetris_theme.ogg');
+          tetrisTheme.volume = 0.05;
           if (typeof tetrisTheme.loop == 'boolean')
           {
               tetrisTheme.loop = true;

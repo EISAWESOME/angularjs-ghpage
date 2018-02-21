@@ -49,19 +49,35 @@
           <div class="mainCard" ng-hide="cardHide" ng-cloak flex-90>
 
             <div class="info">
+
               <div id="avatar" layout="row" layout-align="center center" flex>
-                <img src="https://github.com/EISAWESOME.png" class="scale" alt="Avatar">
+                <img ng-src="{{avatarUrl}}" class="scale" alt="Avatar">
               </div>
 
-              <div id="catchPhrase" layout="row" layout-align="center center" flex>
+              <p id="catchPhrase" layout="row" layout-align="center center" flex>
                 {{catchPhrase}}
-              </div>
-
+              </p>
 
               <div id="links" class="pop" layout="row" layout-align="center center" flex>
-                <div flex><a href="https://github.com/EISAWESOME"><img class="scale-small github" src="img/github.png"></a></div>
-                <div flex><a href="https://www.linkedin.com/in/csimonin-dev/"><img class="scale-small linkedin" src="img/linkedin.png"></a></div>
-                <div flex><a href="resources/CV-clement-simonin.pdf" target="_blank"><img class="scale-small resume" src="img/resume.png"></a></div>
+
+                <div flex>
+                  <a href="https://github.com/EISAWESOME">
+                    <img class="scale-small github" src="img/github.png" alt="GitHub">
+                  </a>
+                </div>
+
+                <div flex>
+                  <a href="https://www.linkedin.com/in/csimonin-dev/">
+                    <img class="scale-small linkedin" src="img/linkedin.png" alt="LinkedIn">
+                  </a>
+                </div>
+
+                <div flex>
+                  <a href="resources/CV-clement-simonin.pdf" target="_blank">
+                    <img class="scale-small resume" src="img/resume.png" alt="Resumé">
+                  </a>
+                </div>
+
               </div>
 
             </div>
@@ -82,7 +98,7 @@
           </div>
           <div class="achievement achievement-text">
             <p class="achievement achievement-notification">Achievement unlocked</p>
-            <p class="achievement achievement-name">500G &ndash; Keen eye</p>
+            <p class="achievement achievement-name">25G &ndash; Konami Code</p>
           </div>
         </div>
       </div>
