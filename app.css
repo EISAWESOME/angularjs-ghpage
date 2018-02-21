@@ -49,7 +49,6 @@ body {
   max-height : 80%;
   /* Fluid square */
   width: 40%;
-  height: 0;
   padding-bottom: 40%;
 
   transform-style: preserve-3d;
