@@ -2,7 +2,7 @@
 .achievement-container{
   position : fixed;
   bottom:5%;
-  left:-5%;
+  left:-3%;
 
   background: transparent;
   transform: scale(0.7);
