@@ -1,13 +1,13 @@
 (function(){
-  let app = angular.module("pageModule", ['ngMaterial', 'ngAnimate']);
+  const app = angular.module("pageModule", ['ngMaterial', 'ngAnimate']);
 
   app.controller("pageController", function($rootScope, $scope, $timeout){
 
-    let username = "EISAWESOME";
+    const username = "EISAWESOME";
 
     $scope.init = function(){
       $scope.catchPhrase = "<clement-s/>";
-      $scope.avatarUrl = "https://github.com/"+ username +".png";
+      $scope.avatarUrl = `https://github.com/${username}.png`;
     };
 
     new Konami(function(){
@@ -19,21 +19,14 @@
         $scope.tetrisShow = true;
 
         $timeout(function(){
-          $('.game').blockrain({theme: "candy", playText: 'Use arrow keys to play', playButtonText: 'Understood !',});
+          $('.game').blockrain({theme: 'candy', playText: 'Use arrow keys to play', playButtonText: 'Understood !',});
 
-          let tetrisTheme = new Audio('resources/Tetris_theme.ogg');
-          tetrisTheme.volume = 0.05;
-          if (typeof tetrisTheme.loop == 'boolean')
-          {
-              tetrisTheme.loop = true;
-          }
-          else
-          {
-              tetrisTheme.addEventListener('ended', function() {
-                  this.currentTime = 0;
-                  this.play();
-              }, false);
-          }
+          const tetrisTheme = new Howl({
+              src: ['resources/sounds/Tetris_theme.ogg','resources/sounds/Tetris_theme.mp3'],
+              loop: true,
+              volume: 0.5
+          });
+
           tetrisTheme.play();
 
         },1001)
