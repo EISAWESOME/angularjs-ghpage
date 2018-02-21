@@ -34,14 +34,15 @@
 
     <body ng-app="pageModule" ng-controller="pageController" ng-init="init()">
 
-      <div class="constr" ng-hide="cardHide"> EN CONSTRUCTION </div>
-
       <div class="starsContainer" layout="row" layout-wrap flex>
         <div id='stars'></div>
         <div id='stars2'></div>
         <div id='stars3'></div>
 
-        <md-content class="animate-opacity main" layout="column" layout-align="center center">
+        <div class="constr" ng-hide="cardHide"> EN CONSTRUCTION </div>
+
+
+        <md-content class="animate-opacity main" layout-align="center center">
 
           <div class="mainCard" ng-hide="cardHide" ng-cloak>
 
