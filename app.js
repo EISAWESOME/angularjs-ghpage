@@ -26,6 +26,21 @@
 
         $timeout(function(){
           $('.game').blockrain({theme: "candy", playText: 'IT\'S A SECRET TO EVERYBODY',});
+
+          var tetrisTheme = new Audio('resources/Tetris_theme.ogg');
+          if (typeof tetrisTheme.loop == 'boolean')
+          {
+              tetrisTheme.loop = true;
+          }
+          else
+          {
+              tetrisTheme.addEventListener('ended', function() {
+                  this.currentTime = 0;
+                  this.play();
+              }, false);
+          }
+          tetrisTheme.play();
+
         },1001)
 
 

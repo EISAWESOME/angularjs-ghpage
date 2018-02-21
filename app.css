@@ -12,6 +12,8 @@ body {
 }
 
 .constr{
+  max-height : 40px;
+
   font-family: "Lato", sans-serif;
   background: transparent;
   text-align: center;
@@ -121,9 +123,9 @@ body {
 }
 
 .game{
+  top: 0;
   height :100%;
-   width :30%;
-   position :absolute;
+  width :30%;
 }
 
 .kcode {
