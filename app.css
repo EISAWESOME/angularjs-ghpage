@@ -14,9 +14,6 @@ body {
 .constr{
   font-family: "Lato", sans-serif;
   background: transparent;
-  position: absolute;
-  top: 5%;
-  width: 100%;
   text-align: center;
 
   background: -webkit-linear-gradient(white, #38495a);
@@ -26,6 +23,7 @@ body {
   font-weight: 300;
   font-size: 30px;
   letter-spacing: 10px;
+  margin-bottom : 1%;
 }
 
 .animate-opacity{
@@ -151,5 +149,23 @@ body {
   #catchPhrase {
     font-size: 7vw;
     margin-bottom: 10vw;
+  }
+}
+
+@media (max-width: 580px){
+  .constr{
+
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom : 1%;
+  }
+}
+
+@media (max-width: 300px){
+  .constr{
+
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom : 1%;
   }
 }
