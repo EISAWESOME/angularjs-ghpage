@@ -125,7 +125,7 @@ md-content.main{
 .game{
   top: 0;
   height :100%;
-  width :30%;
+  width :40%;
 }
 
 .kcode {
@@ -146,6 +146,10 @@ md-content.main{
     height: 0;
     padding-bottom: 70%;
 
+  }
+
+  .game {
+    width :70%;
   }
 
   .scale-small{
