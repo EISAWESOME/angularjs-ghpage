@@ -1,3 +1,4 @@
+/* Body */
 body {
     background-color: transparent;
 
@@ -10,6 +11,9 @@ body {
     -o-transform: translateZ(0);
     transform: translateZ(0);
 }
+
+
+/* Constr : En contruction */
 
 .constr {
     max-height: 40px;
@@ -30,6 +34,12 @@ body {
     margin-bottom: 1%;
 }
 
+
+/* Style de la div main, et de la mainCard */
+
+/**
+Animation de l'opacité au chargement de la page
+ */
 .animate-opacity {
     animation: opac 1.3s
 }
@@ -64,32 +74,20 @@ md-content.main {
     transition: all linear 0.1s;
 }
 
-.pop {
-    transform: translateZ(1vw);
-}
-
-.ng-hide {
-    transition: all linear 1s;
-    opacity: 0;
-}
-
-.tetris {
-    transition: all linear 1s 1s;
-}
-
 #avatar img {
     width: 100%;
+    /* Necessary for IE*/
     height: 100%;
-    margin-top: 0.5vw;
-    margin-bottom: 1vw;
+    height: auto;
     border-radius: 50%;
+    max-width: 40%;
 }
 
 #catchPhrase {
     margin: calc(2vh + 2vw) 0;
     opacity: 0.7;
     text-align: center;
-    font-size: calc(20px + 2vw);
+    font-size: calc(20px + 2.5vw);
     color: white;
 }
 
@@ -98,10 +96,8 @@ md-content.main {
     margin-right: auto;
     display: block;
 }
-
-.scale {
-    height: auto;
-    max-width: 40%;
+.pop {
+    transform: translateZ(1vw);
 }
 
 .scale-small {
@@ -110,6 +106,7 @@ md-content.main {
     max-width: 50%;
 }
 
+/* Hover filter */
 .scale-small.github:hover, .scale-small.github:active,
 .scale-small.resume:hover, .scale-small.resume:active {
     transform: scale(1.1);
@@ -119,6 +116,17 @@ md-content.main {
 .scale-small.linkedin:hover {
     transform: scale(1.1);
     filter: brightness(50%) sepia(100) saturate(70) hue-rotate(180deg);
+}
+
+.ng-hide {
+    transition: all linear 1s;
+    opacity: 0;
+}
+
+/* Tetris */
+
+.tetris {
+    transition: all linear 1s 1s;
 }
 
 .tetris {
@@ -132,6 +140,10 @@ md-content.main {
     width: 40%;
 }
 
+
+
+/* Konami Code */
+
 .kcode {
     position: absolute;
     bottom: 0;
@@ -142,48 +154,22 @@ md-content.main {
     filter: alpha(opacity=25);
 }
 
+
+/* Media queries */
 @media (max-width: 1000px) {
-
-    /*
-    .mainCard {
-
-      width: 80vw;
-      height: 80vw;
-
-    }*/
     .game {
-        width: 70%;
+        width: 70vw;
     }
-
-    /*
-    .scale-small{
-      max-width: 40%;
-    }
-
-
-
-    #catchPhrase {
-      font-size: 7vw;
-      margin-bottom: 10vh;
-    }
-  */
-
 }
 
 @media (max-width: 580px) {
     .constr {
-
-        font-size: 20px;
-        letter-spacing: 3px;
-        margin-bottom: 1%;
+        font-size: 25px;
     }
 }
 
 @media (max-width: 300px) {
     .constr {
-
-        font-size: 10px;
-        letter-spacing: 3px;
-        margin-bottom: 1%;
+        font-size: 17px;
     }
 }

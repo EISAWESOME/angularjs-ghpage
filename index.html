@@ -1,113 +1,110 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Clément S.</title>
+<head>
+    <title>Clément S.</title>
 
-        <!-- Jquery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="lib/blockrain/blockrain.jquery.min.js"></script>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="lib/blockrain/blockrain.jquery.min.js"></script>
 
-        <!-- Angular JS-->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 
-        <!-- Angular Material requires Angular.js Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 
-        <!-- Angular Material Library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
-        <!--Howler-->
-        <script src="lib/howler/howler.min.js" ></script>
+    <!--Howler-->
+    <script src="lib/howler/howler.min.js"></script>
 
-        <script src="app.js"></script>
-        <script src="lib/konami.js"></script>
+    <script src="app.js"></script>
+    <script src="lib/konami.js"></script>
 
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="css/app.css">
-        <link rel="stylesheet" href="lib/stars/stars.css">
-        <link rel="stylesheet" href="lib/achievement/achievement.css">
-        <link rel="stylesheet" href="lib/blockrain/blockrain.css">
-    </head>
-
-
-
-    <body ng-app="pageModule" ng-controller="pageController" ng-init="init()">
-
-      <div class="starsContainer" layout="row" layout-wrap flex>
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="lib/stars/stars.css">
+    <link rel="stylesheet" href="lib/achievement/achievement.css">
+    <link rel="stylesheet" href="lib/blockrain/blockrain.css">
+</head>
 
 
+<body ng-app="pageModule" ng-controller="pageController" ng-init="init()" >
+
+<div class="starsContainer" layout="row" layout-wrap flex msd-wheel="starScroll($event, $delta, $deltaX, $deltaY)">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
 
 
-        <md-content class="animate-opacity main" layout="column" layout-align="center center">
+    <md-content class="animate-opacity main" layout="column" layout-align="center center">
 
-          <div class="constr" ng-hide="cardHide" flex-10> EN CONSTRUCTION </div>
+        <div class="constr" ng-hide="cardHide" flex-10> EN CONSTRUCTION</div>
 
-          <div class="mainCard" ng-hide="cardHide" ng-cloak flex-90>
+        <div class="mainCard" ng-hide="cardHide" ng-cloak flex-90>
 
             <div class="info">
 
-              <div id="avatar" layout="row" layout-align="center center" flex>
-                <img ng-src="{{avatarUrl}}" class="scale" alt="Avatar">
-              </div>
-
-              <p id="catchPhrase" layout="row" layout-align="center center" flex>
-                {{catchPhrase}}
-              </p>
-
-              <div id="links" class="pop" layout="row" layout-align="center center" flex>
-
-                <div flex>
-                  <a href="https://github.com/EISAWESOME">
-                    <img class="scale-small github" src="img/github.png" alt="GitHub">
-                  </a>
+                <div id="avatar" layout="row" layout-align="center center" flex>
+                    <img ng-src="{{avatarUrl}}" alt="Avatar">
                 </div>
 
-                <div flex>
-                  <a href="https://www.linkedin.com/in/csimonin-dev/">
-                    <img class="scale-small linkedin" src="img/linkedin.png" alt="LinkedIn">
-                  </a>
-                </div>
+                <p id="catchPhrase" layout="row" layout-align="center center" flex>
+                    {{catchPhrase}}
+                </p>
 
-                <div flex>
-                  <a href="resources/CV-clement-simonin.pdf" target="_blank">
-                    <img class="scale-small resume" src="img/resume.png" alt="Resumé">
-                  </a>
-                </div>
+                <div id="links" class="pop" layout="row" layout-align="center center" flex>
 
-              </div>
+                    <div flex>
+                        <a href="https://github.com/EISAWESOME">
+                            <img class="scale-small github" src="img/github.png" alt="GitHub">
+                        </a>
+                    </div>
+
+                    <div flex>
+                        <a href="https://www.linkedin.com/in/csimonin-dev/">
+                            <img class="scale-small linkedin" src="img/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+
+                    <div flex>
+                        <a href="resources/CV-clement-simonin.pdf" target="_blank">
+                            <img class="scale-small resume" src="img/resume.png" alt="Resumé">
+                        </a>
+                    </div>
+
+                </div>
 
             </div>
-          </div>
+        </div>
 
-          <div class="tetris" ng-show="tetrisShow" layout="row" layout-align="center center">
+        <div class="tetris" ng-show="tetrisShow" layout="row" layout-align="center center">
             <div class="game"></div>
-          </div>
+        </div>
 
-        </md-content>
-      </div>
+    </md-content>
+</div>
 
 
-      <div class="achievement-container" ng-if="achivementTriggered">
-        <div class="achievement achievement-banner">
-          <div class="achievement achievement-icon">
+<div class="achievement-container" ng-if="achivementTriggered">
+    <div class="achievement achievement-banner">
+        <div class="achievement achievement-icon">
             <span class="achievement icon"><span class="icon-trophy"></span></span>
-          </div>
-          <div class="achievement achievement-text">
+        </div>
+        <div class="achievement achievement-text">
             <p class="achievement achievement-notification">Achievement unlocked</p>
             <p class="achievement achievement-name">25G &ndash; Konami Code</p>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <img class="kcode" ng-hide="cardHide" src="img/kcode-small.png">
+<img class="kcode" ng-hide="cardHide" src="img/kcode-small.png">
 
-    </body>
+</body>
 </html>
