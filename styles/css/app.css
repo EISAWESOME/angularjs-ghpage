@@ -8,6 +8,7 @@ body {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+  /* Konami Code */
 }
 body md-content.main {
   background-color: transparent;
@@ -29,8 +30,8 @@ body md-content.main .constr {
   letter-spacing: 10px;
   margin-bottom: 1%;
 }
-body md-content.main .mainCard {
-  background-image: linear-gradient(150deg, #1520ab 0%, #9e23a0 100%, #2b153d 100%);
+body md-content.main .profileCard {
+  background-image: linear-gradient(150deg, #1f4eab 0%, #733298 100%, #8f87bb 100%);
   background-size: cover;
   min-width: 270px;
   min-height: 270px;
@@ -40,7 +41,7 @@ body md-content.main .mainCard {
   transform-style: preserve-3d;
   transition: all linear 0.1s;
 }
-body md-content.main .mainCard #avatar img {
+body md-content.main .profileCard #avatar img {
   width: 100%;
   /* Necessary for IE*/
   height: 100%;
@@ -48,37 +49,58 @@ body md-content.main .mainCard #avatar img {
   border-radius: 50%;
   max-width: 40%;
 }
-body md-content.main .mainCard #catchPhrase {
+body md-content.main .profileCard #catchPhrase {
   margin: calc(2vh + 2vw) 0;
   opacity: 0.7;
   text-align: center;
   font-size: calc(20px + 2.5vw);
   color: white;
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-body md-content.main .mainCard #links {
+body md-content.main .profileCard #catchPhrase .shine {
+  width: 100%;
+  -webkit-animation-name: ShineAnimation;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.12, 0.89, 0.98, 0.47);
+}
+@-webkit-keyframes ShineAnimation {
+  from {
+    background-repeat: no-repeat;
+    background-image: -webkit-linear-gradient(top left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 45%, rgba(219, 195, 218, 0.8) 48%, rgba(248, 147, 255, 0.8) 50%, rgba(219, 195, 218, 0.8) 52%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);
+    background-position: -250px -250px;
+    background-size: 600px 600px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  to {
+    background-repeat: no-repeat;
+    background-position: 250px 250px;
+  }
+}
+body md-content.main .profileCard #links {
   /* Hover filter */
 }
-body md-content.main .mainCard #links img {
+body md-content.main .profileCard #links img {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-body md-content.main .mainCard #links .pop {
-  transform: translateZ(1vw);
-}
-body md-content.main .mainCard #links .scale-small {
+body md-content.main .profileCard #links .scale-small {
   transition: transform .2s;
   height: auto;
   max-width: 50%;
 }
-body md-content.main .mainCard #links .github:hover,
-body md-content.main .mainCard #links .github:active,
-body md-content.main .mainCard #links .resume:hover,
-body md-content.main .mainCard #links .resume:active {
+body md-content.main .profileCard #links .github:hover,
+body md-content.main .profileCard #links .github:active,
+body md-content.main .profileCard #links .resume:hover,
+body md-content.main .profileCard #links .resume:active {
   transform: scale(1.1);
   filter: invert(100%);
 }
-body md-content.main .mainCard #links .linkedin:hover {
+body md-content.main .profileCard #links .linkedin:hover {
   transform: scale(1.1);
   filter: brightness(50%) sepia(100) saturate(70) hue-rotate(180deg);
 }
@@ -92,18 +114,17 @@ body md-content.main .tetris .game {
   height: 100%;
   width: 40%;
 }
-.ng-hide {
-  transition: all linear 1s;
-  opacity: 0;
-}
-/* Konami Code */
-.kcode {
+body .kcode {
   position: absolute;
   bottom: 0;
   left: 50%;
   margin-left: -120px;
   opacity: 0.25;
   filter: alpha(opacity=25);
+}
+.ng-hide {
+  transition: all linear 1s;
+  opacity: 0;
 }
 /**
 Animation de l'opacité au chargement de la page
