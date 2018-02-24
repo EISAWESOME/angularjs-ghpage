@@ -14,6 +14,11 @@
         //Triggers when konami code is detected
         new Konami(function () {
             $scope.achivementTriggered = true;
+            const jingle = new Howl({
+                src: ['resources/sounds/AchievementUnlocked.mp3'],
+                volume: 0.5
+            });
+            jingle.play();
 
             $scope.cardHide = true;
 
@@ -22,7 +27,7 @@
 
                 $timeout(function () {
                     $('.game').blockrain({
-                        theme: 'candy',
+                        theme: 'retro',
                         playText: 'Use arrow keys to play',
                         playButtonText: 'Understood !',
                     });
@@ -30,7 +35,7 @@
                     const tetrisTheme = new Howl({
                         src: ['resources/sounds/Tetris_theme.ogg', 'resources/sounds/Tetris_theme.mp3'],
                         loop: true,
-                        volume: 0.5
+                        volume: 0.2
                     });
 
                     tetrisTheme.play();
