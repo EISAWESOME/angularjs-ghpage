@@ -45,8 +45,13 @@ body {
 			min-width: 270px;
 			min-height: 270px;
 			/* Fluid square */
+
+			/* Fallback*/
 			width: calc(25vw + 25vh);
 			height: calc(25vw + 25vh);
+
+			width: 70vmin;
+			height: 70vmin;
 
 			transform-style: preserve-3d;
 
@@ -68,7 +73,7 @@ body {
 				text-align: center;
 				font-size: calc(20px + 2.5vw);
 				color: #c4c8bc;
-				background-color : #c4c8bc;
+				background-image : -webkit-linear-gradient( top left, #c4c8bc 100%, #c4c8bc 100%, );
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 
